@@ -1,0 +1,105 @@
+
+
+{BEGIN container_0}
+<table class="runner-c runner-c-0" cellpadding="0" >
+<tr class="{$cheaderclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-detailspreviewheader" {$brickclass_detailspreviewheader}><span>{$caption dbo_Customers}
+</span></td>
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_0}
+
+
+
+{BEGIN container_0}
+<table class="runner-c runner-c-0" cellpadding="0" >
+<tr class="{$cheaderclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-detailspreviewdetailsfount" {$brickclass_detailspreviewdetailsfount}><span>{mlang_message DETAILS_FOUND}: <strong>{$row_count}.</strong>
+</span></td>
+
+
+
+{BEGIN display_first}
+<td  class="runner-cc runner-bl runner-b-detailspreviewdispfirst" {$brickclass_detailspreviewdispfirst}><span>{mlang_message DISPLAYING_FIRST}: <strong>{$display_count}</strong>.
+</span></td>
+{END display_first}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_0}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table cellpadding="1" cellspacing="1" class="runner-detailtable">
+	<tr>
+		<td><strong>{$label dbo_Customers ID}</strong></td>
+		<td><strong>{$label dbo_Customers Name}</strong></td>
+		<td><strong>{$label dbo_Customers Father_Name}</strong></td>
+		<td><strong>{$label dbo_Customers Address}</strong></td>
+		<td><strong>{$label dbo_Customers Contact}</strong></td>
+		<td><strong>{$label dbo_Customers Location}</strong></td>
+		<td><strong>{$label dbo_Customers Customer_Type}</strong></td>
+	</tr>
+	{BEGIN details_row}
+	<tr>
+		<td>{$ID_value}</td>
+		<td>{$Name_value}</td>
+		<td>{$Father_Name_value}</td>
+		<td>{$Address_value}</td>
+		<td>{$Contact_value}</td>
+		<td>{$Location_value}</td>
+		<td>{$Customer_Type_value}</td>
+	</tr>
+{END details_row}
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+

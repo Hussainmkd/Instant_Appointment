@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=windows-1256" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css"><LINK rel=stylesheet type=text/css href="{$stylepath}"><LINK rel=stylesheet type=text/css href="{$pagestylepath}"><!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css"><LINK rel=stylesheet type=text/css href="{$stylepathIE}"><![endif]-->
+<META name=GENERATOR content="MSHTML 10.00.9200.16458"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}
+<P align=center>{$header} </P>
+<DIV align=center>
+<TABLE class=runner-toptable cellPadding=0 align=center>
+  <TBODY>
+  <TR class=runner-header>
+    <TD class=runner-top colSpan=3>
+      {BEGIN container_master}
+      <TABLE class="runner-c runner-c-master" cellPadding=0>
+        <TBODY>
+        <TR class="{$cheaderclass_master}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1">
+          <TD class=runner-cl></TD>
+          <TD class=runner-cc>
+            <TABLE class=runner-hc cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                {BEGIN mastertable_block}<TD class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}>
+                  <SPAN>{$showmasterfile} 
+                  </SPAN></TD>
+                {END mastertable_block}<TD class="runner-cc filler">
+                  </TD></TR></TBODY></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_master}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_master}</TD></TR>
+  <TR class=runner-body>
+    <TD class="runner-left {$blockclass_left}"></TD>
+    <TD class="runner-center {$blockclass_center}">
+      {BEGIN container_grid}{BEGIN grid_block}{BEGIN page}
+      <H1>{$caption dbo_Actions}</H1><SPAN>{BEGIN page_number}{mlang_message PAGE1} {$pageno} {mlang_message PAGE2} {$maxpages}{END page_number} </SPAN>
+      <DIV class=runner-s-grid>
+      <TABLE class=runner-c-grid cellPadding=0>{BEGIN grid_row}
+        <TBODY>
+        <TR {$rowstyle} {$rowattrs}>{BEGIN grid_record}
+          <TD class=runner-cg>
+            <TABLE class=runner-c cellPadding=0>
+              <TBODY>
+              <TR class="runner-toprow style1">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+              <TR class="runner-row style1">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">{$label dbo_Actions Anomaly}</TD>
+                <TD class="runner-cc runner-cc2" {$Anomaly_style}>{$Anomaly_value}</TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="runner-row style1">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">{$label dbo_Actions Action}</TD>
+                <TD class="runner-cc runner-cc2" {$Action_style}>{$Action_value}</TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="runner-bottomrow style1">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE></TD>
+          {BEGIN endrecord_block}<TD class=runner-cs>&nbsp;</TD>{END endrecord_block}{END grid_record}</TR>
+        {BEGIN grid_rowspace}<TR class=runner-rs>
+          {BEGIN grid_recordspace}<TD>&nbsp;</TD>{END grid_recordspace}</TR>{END grid_rowspace}</TBODY>{END grid_row}</TABLE></DIV>{END page}{END grid_block}{END container_grid}</TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer>
+    <TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TBODY></TABLE></DIV>
+<P align=center>{$footer} </P>{END body}</BODY></HTML>

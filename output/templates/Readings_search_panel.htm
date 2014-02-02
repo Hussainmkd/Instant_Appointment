@@ -1,0 +1,91 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		{mlang_message SEARCH_CRITERIA}:&nbsp;
+		<input type="radio" name="srchType" {$all_checkbox}>{BEGIN all_checkbox_label}{mlang_message SEARCH_ALL}{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" {$any_checkbox}>{BEGIN any_checkbox_label}{mlang_message SEARCH_ANY}{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>{mlang_message SEARCH_ADD_FIELD}</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_Record_ID}
+			<a href="#" id="addSearchControl_Record_ID" class="addSearchControl" {$addSearchControl_Record_ID_attrs}>{$label dbo_Readings Record_ID}</a><br>
+		{END addSearch_Record_ID}
+		{BEGIN addSearch_Module_ID}
+			<a href="#" id="addSearchControl_Module_ID" class="addSearchControl" {$addSearchControl_Module_ID_attrs}>{$label dbo_Readings Module_ID}</a><br>
+		{END addSearch_Module_ID}
+		{BEGIN addSearch_Voltage_Red}
+			<a href="#" id="addSearchControl_Voltage_Red" class="addSearchControl" {$addSearchControl_Voltage_Red_attrs}>{$label dbo_Readings Voltage_Red}</a><br>
+		{END addSearch_Voltage_Red}
+		{BEGIN addSearch_Voltage_Blue}
+			<a href="#" id="addSearchControl_Voltage_Blue" class="addSearchControl" {$addSearchControl_Voltage_Blue_attrs}>{$label dbo_Readings Voltage_Blue}</a><br>
+		{END addSearch_Voltage_Blue}
+		{BEGIN addSearch_Voltage_Yellow}
+			<a href="#" id="addSearchControl_Voltage_Yellow" class="addSearchControl" {$addSearchControl_Voltage_Yellow_attrs}>{$label dbo_Readings Voltage_Yellow}</a><br>
+		{END addSearch_Voltage_Yellow}
+		{BEGIN addSearch_Currunt_Red}
+			<a href="#" id="addSearchControl_Currunt_Red" class="addSearchControl" {$addSearchControl_Currunt_Red_attrs}>{$label dbo_Readings Currunt_Red}</a><br>
+		{END addSearch_Currunt_Red}
+		{BEGIN addSearch_Currunt_Blue}
+			<a href="#" id="addSearchControl_Currunt_Blue" class="addSearchControl" {$addSearchControl_Currunt_Blue_attrs}>{$label dbo_Readings Currunt_Blue}</a><br>
+		{END addSearch_Currunt_Blue}
+		{BEGIN addSearch_Currunt_Yellow}
+			<a href="#" id="addSearchControl_Currunt_Yellow" class="addSearchControl" {$addSearchControl_Currunt_Yellow_attrs}>{$label dbo_Readings Currunt_Yellow}</a><br>
+		{END addSearch_Currunt_Yellow}
+		{BEGIN addSearch_PF_Red}
+			<a href="#" id="addSearchControl_PF_Red" class="addSearchControl" {$addSearchControl_PF_Red_attrs}>{$label dbo_Readings PF_Red}</a><br>
+		{END addSearch_PF_Red}
+		{BEGIN addSearch_PF_Blue}
+			<a href="#" id="addSearchControl_PF_Blue" class="addSearchControl" {$addSearchControl_PF_Blue_attrs}>{$label dbo_Readings PF_Blue}</a><br>
+		{END addSearch_PF_Blue}
+		{BEGIN addSearch_PF_Yellow}
+			<a href="#" id="addSearchControl_PF_Yellow" class="addSearchControl" {$addSearchControl_PF_Yellow_attrs}>{$label dbo_Readings PF_Yellow}</a><br>
+		{END addSearch_PF_Yellow}
+		{BEGIN addSearch_Peak_Power}
+			<a href="#" id="addSearchControl_Peak_Power" class="addSearchControl" {$addSearchControl_Peak_Power_attrs}>{$label dbo_Readings Peak_Power}</a><br>
+		{END addSearch_Peak_Power}
+		{BEGIN addSearch_Date_Time}
+			<a href="#" id="addSearchControl_Date_Time" class="addSearchControl" {$addSearchControl_Date_Time_attrs}>{$label dbo_Readings Date_Time}</a><br>
+		{END addSearch_Date_Time}
+		{BEGIN addSearch_IsSync}
+			<a href="#" id="addSearchControl_IsSync" class="addSearchControl" {$addSearchControl_IsSync_attrs}>{$label dbo_Readings IsSync}</a><br>
+		{END addSearch_IsSync}
+		{BEGIN addSearch_Currunt_Readings}
+			<a href="#" id="addSearchControl_Currunt_Readings" class="addSearchControl" {$addSearchControl_Currunt_Readings_attrs}>{$label dbo_Readings Currunt_Readings}</a><br>
+		{END addSearch_Currunt_Readings}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</td>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>{mlang_message SEARCH}</a>
+		</span>
+	</div>
+</div>

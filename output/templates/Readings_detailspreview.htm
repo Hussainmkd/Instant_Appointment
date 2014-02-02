@@ -1,0 +1,121 @@
+
+
+{BEGIN container_0}
+<table class="runner-c runner-c-0" cellpadding="0" >
+<tr class="{$cheaderclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-detailspreviewheader" {$brickclass_detailspreviewheader}><span>{$caption dbo_Readings}
+</span></td>
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_0}
+
+
+
+{BEGIN container_0}
+<table class="runner-c runner-c-0" cellpadding="0" >
+<tr class="{$cheaderclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-detailspreviewdetailsfount" {$brickclass_detailspreviewdetailsfount}><span>{mlang_message DETAILS_FOUND}: <strong>{$row_count}.</strong>
+</span></td>
+
+
+
+{BEGIN display_first}
+<td  class="runner-cc runner-bl runner-b-detailspreviewdispfirst" {$brickclass_detailspreviewdispfirst}><span>{mlang_message DISPLAYING_FIRST}: <strong>{$display_count}</strong>.
+</span></td>
+{END display_first}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_0}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table cellpadding="1" cellspacing="1" class="runner-detailtable">
+	<tr>
+		<td><strong>{$label dbo_Readings Record_ID}</strong></td>
+		<td><strong>{$label dbo_Readings Module_ID}</strong></td>
+		<td><strong>{$label dbo_Readings Voltage_Red}</strong></td>
+		<td><strong>{$label dbo_Readings Voltage_Blue}</strong></td>
+		<td><strong>{$label dbo_Readings Voltage_Yellow}</strong></td>
+		<td><strong>{$label dbo_Readings Currunt_Red}</strong></td>
+		<td><strong>{$label dbo_Readings Currunt_Blue}</strong></td>
+		<td><strong>{$label dbo_Readings Currunt_Yellow}</strong></td>
+		<td><strong>{$label dbo_Readings PF_Red}</strong></td>
+		<td><strong>{$label dbo_Readings PF_Blue}</strong></td>
+		<td><strong>{$label dbo_Readings PF_Yellow}</strong></td>
+		<td><strong>{$label dbo_Readings Peak_Power}</strong></td>
+		<td><strong>{$label dbo_Readings Date_Time}</strong></td>
+		<td><strong>{$label dbo_Readings IsSync}</strong></td>
+		<td><strong>{$label dbo_Readings Currunt_Readings}</strong></td>
+	</tr>
+	{BEGIN details_row}
+	<tr>
+		<td>{$Record_ID_value}</td>
+		<td>{$Module_ID_value}</td>
+		<td>{$Voltage_Red_value}</td>
+		<td>{$Voltage_Blue_value}</td>
+		<td>{$Voltage_Yellow_value}</td>
+		<td>{$Currunt_Red_value}</td>
+		<td>{$Currunt_Blue_value}</td>
+		<td>{$Currunt_Yellow_value}</td>
+		<td>{$PF_Red_value}</td>
+		<td>{$PF_Blue_value}</td>
+		<td>{$PF_Yellow_value}</td>
+		<td>{$Peak_Power_value}</td>
+		<td>{$Date_Time_value}</td>
+		<td>{$IsSync_value}</td>
+		<td>{$Currunt_Readings_value}</td>
+	</tr>
+{END details_row}
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+

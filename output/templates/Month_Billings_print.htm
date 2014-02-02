@@ -1,0 +1,238 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>{$caption dbo_Month_Billings}</h1>
+<span>
+{BEGIN page_number}
+{mlang_message PAGE1} {$pageno} {mlang_message PAGE2} {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN Bill_ID_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Bill_ID_fieldheader}
+	<b>{$label dbo_Month_Billings Bill_ID}</b>
+	{END Bill_ID_fieldheader}
+</td>
+{END Bill_ID_fieldheadercolumn}
+	{BEGIN Customer_ID_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Customer_ID_fieldheader}
+	<b>{$label dbo_Month_Billings Customer_ID}</b>
+	{END Customer_ID_fieldheader}
+</td>
+{END Customer_ID_fieldheadercolumn}
+	{BEGIN Bill_Month_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Bill_Month_fieldheader}
+	<b>{$label dbo_Month_Billings Bill_Month}</b>
+	{END Bill_Month_fieldheader}
+</td>
+{END Bill_Month_fieldheadercolumn}
+	{BEGIN Previous_Readings_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Previous_Readings_fieldheader}
+	<b>{$label dbo_Month_Billings Previous_Readings}</b>
+	{END Previous_Readings_fieldheader}
+</td>
+{END Previous_Readings_fieldheadercolumn}
+	{BEGIN Currunt_Readings_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Currunt_Readings_fieldheader}
+	<b>{$label dbo_Month_Billings Currunt_Readings}</b>
+	{END Currunt_Readings_fieldheader}
+</td>
+{END Currunt_Readings_fieldheadercolumn}
+	{BEGIN Unit_Consumed_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Unit_Consumed_fieldheader}
+	<b>{$label dbo_Month_Billings Unit_Consumed}</b>
+	{END Unit_Consumed_fieldheader}
+</td>
+{END Unit_Consumed_fieldheadercolumn}
+	{BEGIN Bill_Amount_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Bill_Amount_fieldheader}
+	<b>{$label dbo_Month_Billings Bill_Amount}</b>
+	{END Bill_Amount_fieldheader}
+</td>
+{END Bill_Amount_fieldheadercolumn}
+	{BEGIN Due_Date_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Due_Date_fieldheader}
+	<b>{$label dbo_Month_Billings Due_Date}</b>
+	{END Due_Date_fieldheader}
+</td>
+{END Due_Date_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN Bill_ID_fieldcolumn}
+<td  class="runner-cc" {$Bill_ID_style}>
+	{$Bill_ID_value}
+</td>
+{END Bill_ID_fieldcolumn}
+	{BEGIN Customer_ID_fieldcolumn}
+<td  class="runner-cc" {$Customer_ID_style}>
+	{$Customer_ID_value}
+</td>
+{END Customer_ID_fieldcolumn}
+	{BEGIN Bill_Month_fieldcolumn}
+<td  class="runner-cc" {$Bill_Month_style}>
+	{$Bill_Month_value}
+</td>
+{END Bill_Month_fieldcolumn}
+	{BEGIN Previous_Readings_fieldcolumn}
+<td  class="runner-cc" {$Previous_Readings_style}>
+	{$Previous_Readings_value}
+</td>
+{END Previous_Readings_fieldcolumn}
+	{BEGIN Currunt_Readings_fieldcolumn}
+<td  class="runner-cc" {$Currunt_Readings_style}>
+	{$Currunt_Readings_value}
+</td>
+{END Currunt_Readings_fieldcolumn}
+	{BEGIN Unit_Consumed_fieldcolumn}
+<td  class="runner-cc" {$Unit_Consumed_style}>
+	{$Unit_Consumed_value}
+</td>
+{END Unit_Consumed_fieldcolumn}
+	{BEGIN Bill_Amount_fieldcolumn}
+<td  class="runner-cc" {$Bill_Amount_style}>
+	{$Bill_Amount_value}
+</td>
+{END Bill_Amount_fieldcolumn}
+	{BEGIN Due_Date_fieldcolumn}
+<td  class="runner-cc" {$Due_Date_style}>
+	{$Due_Date_value}
+</td>
+{END Due_Date_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN Bill_ID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Bill_ID_fieldfootercolumn}
+{BEGIN Customer_ID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Customer_ID_fieldfootercolumn}
+{BEGIN Bill_Month_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Bill_Month_fieldfootercolumn}
+{BEGIN Previous_Readings_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Previous_Readings_fieldfootercolumn}
+{BEGIN Currunt_Readings_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Currunt_Readings_fieldfootercolumn}
+{BEGIN Unit_Consumed_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Unit_Consumed_fieldfootercolumn}
+{BEGIN Bill_Amount_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Bill_Amount_fieldfootercolumn}
+{BEGIN Due_Date_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Due_Date_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

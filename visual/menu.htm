@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=windows-1256" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css"><LINK rel=stylesheet type=text/css href="{$stylepath}"><LINK rel=stylesheet type=text/css href="{$pagestylepath}"><!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css"><LINK rel=stylesheet type=text/css href="{$stylepathIE}"><![endif]-->
+<META name=GENERATOR content="MSHTML 10.00.9200.16458"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}
+<P align=left>{$header} </P>
+<TABLE class=runner-toptable cellPadding=0>
+  <TBODY>
+  <TR class=runner-header>
+    <TD class=runner-top colSpan=3>
+      <DIV align=left>
+      <TABLE class="runner-c runner-c-menu" cellPadding=0>
+        <TBODY>
+        {BEGIN container_menu}{END container_menu}
+        <TBODY>
+        <TR class="{$cheaderclass_menu}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN loggedas_block}<TR class="runner-row style1 runner-b-menulogas {$brickclass_menulogas}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><SPAN>{mlang_message LOGGED_AS}&nbsp;<B>{$username}</B></SPAN></TD>
+          <TD class=runner-cr></TD></TR>
+        {END loggedas_block}{BEGIN logout_link}<TR class="runner-row style1 runner-b-menulogout {$brickclass_menulogout}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$logoutlink_attrs}>{mlang_message LOG_OUT}</A> </SPAN></TD>
+          <TD class=runner-cr></TD></TR>
+        {END logout_link}{BEGIN menu_block}{$mainmenu}{END menu_block}<TR class="{$cfooterclass_menu}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY>
+        <DIV></DIV></TABLE></DIV></TD></TR>
+  <TR class=runner-body>
+    <TD class="runner-left {$blockclass_left}"></TD>
+    <TD class="runner-center {$blockclass_center}"></TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer>
+    <TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TBODY></TABLE>{$footer}{END body} </BODY></HTML>

@@ -1,0 +1,103 @@
+
+
+{BEGIN container_0}
+<table class="runner-c runner-c-0" cellpadding="0" >
+<tr class="{$cheaderclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-detailspreviewheader" {$brickclass_detailspreviewheader}><span>{$caption dbo_Module}
+</span></td>
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_0}
+
+
+
+{BEGIN container_0}
+<table class="runner-c runner-c-0" cellpadding="0" >
+<tr class="{$cheaderclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-detailspreviewdetailsfount" {$brickclass_detailspreviewdetailsfount}><span>{mlang_message DETAILS_FOUND}: <strong>{$row_count}.</strong>
+</span></td>
+
+
+
+{BEGIN display_first}
+<td  class="runner-cc runner-bl runner-b-detailspreviewdispfirst" {$brickclass_detailspreviewdispfirst}><span>{mlang_message DISPLAYING_FIRST}: <strong>{$display_count}</strong>.
+</span></td>
+{END display_first}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_0}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_0}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table cellpadding="1" cellspacing="1" class="runner-detailtable">
+	<tr>
+		<td><strong>{$label dbo_Module ID}</strong></td>
+		<td><strong>{$label dbo_Module Module_Type}</strong></td>
+		<td><strong>{$label dbo_Module Module_Status}</strong></td>
+		<td><strong>{$label dbo_Module Module_Condition}</strong></td>
+		<td><strong>{$label dbo_Module Serial_Num}</strong></td>
+		<td><strong>{$label dbo_Module Entry_Date}</strong></td>
+	</tr>
+	{BEGIN details_row}
+	<tr>
+		<td>{$ID_value}</td>
+		<td>{$Module_Type_value}</td>
+		<td>{$Module_Status_value}</td>
+		<td>{$Module_Condition_value}</td>
+		<td>{$Serial_Num_value}</td>
+		<td>{$Entry_Date_value}</td>
+	</tr>
+{END details_row}
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+

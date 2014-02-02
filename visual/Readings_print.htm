@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=windows-1256" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css"><LINK rel=stylesheet type=text/css href="{$stylepath}"><LINK rel=stylesheet type=text/css href="{$pagestylepath}"><!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css"><LINK rel=stylesheet type=text/css href="{$stylepathIE}"><![endif]-->
+<META name=GENERATOR content="MSHTML 10.00.9200.16458"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable style="WIDTH: 50%" borderColor=#000000 
+cellSpacing=2 cellPadding=0 bgColor=#ffffff border=0><TR class=runner-header><TD class=runner-top style="WIDTH: 598px" colSpan=3>{BEGIN container_master}<table class="runner-c runner-c-master" cellpadding="0" ><tr class="{$cheaderclass_master}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1"><td class="runner-cl"></td>
+<td class="runner-cc"><table border="0" cellpadding="0" class="runner-hc"><tr>{BEGIN mastertable_block}<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				<FONT size=7></FONT>&nbsp;</P><P><FONT size=7><IMG style="HEIGHT: 64px; WIDTH: 67px" border=0 src="images/logo-1.jpg" width=200 height=195>Smart Grid</FONT></P>
+      <P><FONT 
+      size=1>________________________________________________________________________________________________________________________________________________________________________</FONT></P></TD></TR>
+  <TR class=runner-body><TD class="runner-left {$blockclass_left}" style="WIDTH: 1px"></TD>
+    <TD class="runner-center {$blockclass_center}" style="WIDTH: 596px">{BEGIN container_grid}{BEGIN grid_block}{BEGIN page}<FONT 
+      size=5></FONT>&nbsp;{END page}{END grid_block}{END container_grid}<FONT size=5>{BEGIN container_grid}{BEGIN grid_block}{BEGIN page}{$caption dbo_Readings}{END page}{END grid_block}{END container_grid}
+      {BEGIN container_grid}{BEGIN grid_block}{BEGIN page}{END page}{END grid_block}{END container_grid}
+      {BEGIN container_grid}{BEGIN grid_block}{BEGIN page}{END page}{END grid_block}{END container_grid}
+      {BEGIN container_grid}{BEGIN grid_block}{BEGIN page}<TABLE cellSpacing=1 cellPadding=1 width="75%" border=1></TABLE>{END page}{END grid_block}{END container_grid}</FONT>
+      {BEGIN container_grid}{BEGIN grid_block}{BEGIN page}<TABLE class=runner-c-grid style="HEIGHT: 297px; WIDTH: 810px" cellPadding=0>{BEGIN grid_row}<TR {$rowattrs} {$rowstyle}>{BEGIN grid_record}<TD class=runner-cg><TABLE class=runner-c cellPadding=0><TR class="runner-row style1"><TD class="runner-cc runner-cc1" style="WIDTH: 109px"><BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr><BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr><BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr><BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr><UL><LI>{$label dbo_Readings SMID}</LI></UL></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE></TD>
+                <td class="runner-cc runner-cc2"{$SMID_style}>{$SMID_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_Readings AMID}</td>
+	<td class="runner-cc runner-cc2"{$AMID_style}>{$AMID_value}</td>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px"><TD class=runner-cr style="WIDTH: 1px"></TD>{$label dbo_Readings Voltage_Red}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Voltage_Red_style}>{$Voltage_Red_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Voltage_Blue}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Voltage_Blue_style}>{$Voltage_Blue_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Voltage_Yellow}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Voltage_Yellow_style}>{$Voltage_Yellow_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Currunt_Red}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Currunt_Red_style}>{$Currunt_Red_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Currunt_Blue}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Currunt_Blue_style}>{$Currunt_Blue_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Currunt_Yellow}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Currunt_Yellow_style}>{$Currunt_Yellow_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings PF_Red}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$PF_Red_style}>{$PF_Red_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings PF_Blue}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$PF_Blue_style}>{$PF_Blue_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings PF_Yellow}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$PF_Yellow_style}>{$PF_Yellow_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Peak_Power}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Peak_Power_style}>{$Peak_Power_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Date_Time}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Date_Time_style}>{$Date_Time_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings Currunt_Readings}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$Currunt_Readings_style}>{$Currunt_Readings_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl style="WIDTH: 1px"></TD>
+                <TD class="runner-cc runner-cc1" style="WIDTH: 109px">{$label dbo_Readings IsSync}</TD>
+                <TD class="runner-cc runner-cc2" {$IsSync_style}>{$IsSync_value}</TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">{$label dbo_Readings CustomerID}</TD>
+                <TD class="runner-cc runner-cc2" style="WIDTH: 677px" 
+                {$CustomerID_style}>{$CustomerID_value}</TD>
+                <TD class=runner-cr style="WIDTH: 1px"></TD></TR>
+              <TR class="runner-bottomrow style1"><TD class=runner-cl style="WIDTH: 1px"><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc style="WIDTH: 109px"></TD>
+                <TD class=runner-cc style="WIDTH: 677px"></TD>
+                <TD class=runner-cr style="WIDTH: 1px"><IMG src="images/spacer.gif"></TD></TR></TABLE></TD>
+          {BEGIN endrecord_block}<TD class=runner-cs>&nbsp;</TD>{END endrecord_block}{END grid_record}</TR>
+        {BEGIN grid_rowspace}<TR class=runner-rs>{BEGIN grid_recordspace}<TD>&nbsp;</TD>{END grid_recordspace}</TR>
+        {END grid_rowspace}{END grid_row}<DIV></DIV></TABLE>{END page}{END grid_block}{END container_grid}</TD>
+    <TD class="runner-right {$blockclass_right}" style="WIDTH: 1px"></TD></TR>
+  <TR class=runner-footer><TD class=runner-bottom style="WIDTH: 603px" colSpan=3><P><!--%%bottom%%--><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN></P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN></P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}{END page_number}</SPAN></SPAN>&nbsp;</P>
+      <P><SPAN><SPAN>{BEGIN page_number}&nbsp;</P>
+      <P>{mlang_message PAGE1} 
+      {$pageno} {mlang_message PAGE2} {$maxpages}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      {END page_number}</SPAN>{$showmasterfile}</P></SPAN></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>

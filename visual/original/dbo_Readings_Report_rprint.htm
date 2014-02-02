@@ -1,0 +1,98 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="pagestyles/report_print.css" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+			
+
+
+
+{BEGIN container_grid}
+
+
+
+{BEGIN pages}
+<h1>Readings Report</h1>
+	<span {$pages_attrs}>
+		Page <b>{$pageno}</b> of <b>{$maxpages}</b>
+	</span>
+
+
+			<style>
+table.report {border-collapse: collapse} 
+table.report td {padding: 2px;border-width: 1px; border-style: solid; border-color: #cccccc;}
+div.page_block{clear:left;}
+td.noborder{padding-right:8px}
+td.data{padding-right:8px}
+td.pagesummary{background-color:#ffffbb;}
+td.globalsummary{background-color:#ffe0b0;}
+</style>
+{BEGIN grid_block}
+<div id="grid_block{$id}" class="runner-s-grid">
+<TABLE class="runner-c runner-c-grid" WIDTH="auto" CELLPADDING=1 CELLSPACING=0 BORDER=0 style="border: solid; border-width: 1px; border-color: black;">
+<tr class="runner-toprow style1">
+<td class="runner-cc blackshade"><b>SMID</b></td>
+<td class="runner-cc blackshade"><b>AMID</b></td>
+<td class="runner-cc blackshade"><b>Voltage Red</b></td>
+<td class="runner-cc blackshade"><b>Voltage Blue</b></td>
+<td class="runner-cc blackshade"><b>Voltage Yellow</b></td>
+<td class="runner-cc blackshade"><b>Currunt Red</b></td>
+<td class="runner-cc blackshade"><b>Currunt Blue</b></td>
+<td class="runner-cc blackshade"><b>Currunt Yellow</b></td>
+<td class="runner-cc blackshade"><b>PF Red</b></td>
+<td class="runner-cc blackshade"><b>PF Blue</b></td>
+<td class="runner-cc blackshade"><b>PF Yellow</b></td>
+<td class="runner-cc blackshade"><b>Peak Power</b></td>
+<td class="runner-cc blackshade"><b>Date Time</b></td>
+<td class="runner-cc blackshade"><b>Currunt Readings</b></td>
+<td class="runner-cc blackshade"><b>Customer ID</b></td>
+</tr>
+{BEGIN grid_row}
+<!-------------------------------------  data ----------------------------------------->
+{BEGIN row_data}
+<tr class="runner-row style1">
+	<td class="runner-cc data">{$SMID_value}</td>
+	<td class="runner-cc data">{$AMID_value}</td>
+	<td class="runner-cc data">{$Voltage_Red_value}</td>
+	<td class="runner-cc data">{$Voltage_Blue_value}</td>
+	<td class="runner-cc data">{$Voltage_Yellow_value}</td>
+	<td class="runner-cc data">{$Currunt_Red_value}</td>
+	<td class="runner-cc data">{$Currunt_Blue_value}</td>
+	<td class="runner-cc data">{$Currunt_Yellow_value}</td>
+	<td class="runner-cc data">{$PF_Red_value}</td>
+	<td class="runner-cc data">{$PF_Blue_value}</td>
+	<td class="runner-cc data">{$PF_Yellow_value}</td>
+	<td class="runner-cc data">{$Peak_Power_value}</td>
+	<td class="runner-cc data">{$Date_Time_value}</td>
+	<td class="runner-cc data">{$Currunt_Readings_value}</td>
+	<td class="runner-cc data">{$CustomerID_value}</td>
+</tr>
+{END row_data}
+{END grid_row}
+</table>
+</div>
+{END grid_block}
+{END pages}
+
+
+
+
+
+{END container_grid}
+
+
+	{END body}
+	</body>
+</html>

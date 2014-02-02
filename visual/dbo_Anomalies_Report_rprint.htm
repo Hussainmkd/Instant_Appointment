@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=windows-1256" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css"><LINK rel=stylesheet type=text/css href="{$stylepath}"><LINK rel=stylesheet type=text/css 
+href="pagestyles/report_print.css"><!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css"><LINK rel=stylesheet type=text/css href="{$stylepathIE}"><![endif]-->
+<META name=GENERATOR content="MSHTML 10.00.9200.16458"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{BEGIN container_grid}{BEGIN pages}{END pages}{END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}{BEGIN pages}<TABLE borderColor=#ce0a00 cellSpacing=2 cellPadding=0 bgColor=#ffffff border=0>Anomalies Report<TD style="WHITE-SPACE: normal; WIDTH: 110px">&nbsp;<IMG style="HEIGHT: 95px; WIDTH: 89px" border=0 src="images/logo-1.jpg" width=198 height=194>
+		Page </TD>
+    <TD class=" runner-cc" style="WIDTH: 736px"><P><FONT size=6><STRONG>Smart Grid</STRONG></FONT></P>
+      <P><FONT size=2><STRONG>A project&nbsp;of NWFP University of Engineering 
+      &amp; Technology,Peshawar Pakistan</STRONG></FONT></P></TD>
+    <TD style="WIDTH: 4px">&nbsp;</TD></TR></TABLE>{END pages}{END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}{BEGIN pages}&nbsp;{END pages}{END container_grid}{END body}<SPAN {$pages_attrs}>{BEGIN body}{BEGIN container_grid}{BEGIN pages}<FONT>Anomalies ReportAnomalies 
+Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT><FONT size=2>
+		Page event 
+dbo_Customers_Report_snippet</SPAN></FONT> of {END pages}{END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}<FONT 
+size=5></FONT>&nbsp;{END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}{BEGIN pages}&nbsp;{END pages}{END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}{BEGIN pages}
+		Page <B>{$pageno}</B> of <B>{$maxpages}</B>{END pages} {END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}{BEGIN pages}&nbsp;{END pages}{END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}{BEGIN pages}</SPAN>
+<STYLE>
+table.report {border-collapse: collapse} 
+table.report td {padding: 2px;border-width: 1px; border-style: solid; border-color: #cccccc;}
+div.page_block{clear:left;}
+td.noborder{padding-right:8px}
+td.data{padding-right:8px}
+td.pagesummary{background-color:#ffffbb;}
+td.globalsummary{background-color:#ffe0b0;}
+</STYLE>{END pages}
+{END container_grid}
+{END body}{BEGIN body}{BEGIN container_grid}{BEGIN pages}{BEGIN grid_block}<DIV id=grid_block{$id} class=runner-s-grid style="HEIGHT: 51px; WIDTH: 856px"><TABLE class="runner-c runner-c-grid" 
+style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid" 
+cellSpacing=0 cellPadding=1 border=0><TR class="runner-toprow style1"><TD class="runner-cc blackshade" style="WIDTH: 107px"><B>Anomaly ID</B></TD>
+    <TD class="runner-cc blackshade" style="WIDTH: 100px"><B>AMModule</B></TD>
+    <TD class="runner-cc blackshade" style="WIDTH: 164px"><B>Anomaly Description</B></TD>
+    <TD class="runner-cc blackshade" style="WIDTH: 125px"><B>Anomaly Type</B></TD>
+    <TD class="runner-cc blackshade" style="WIDTH: 321px"><B>Date Time</B></TD></TR><!-------------------------------------  data ----------------------------------------->
+  {BEGIN grid_row}{BEGIN row_data}<TR class="runner-row style1"><TD class="runner-cc data" style="WIDTH: 107px">{$AnomalyID_value}</TD>
+    <TD class="runner-cc data" style="WIDTH: 100px">{$AMModule_value}</TD>
+    <TD class="runner-cc data" style="WIDTH: 164px">{$Anomaly_Description_value}</TD>
+    <TD class="runner-cc data" style="WIDTH: 125px">{$Anomaly_Type_value}</TD>
+    <TD class="runner-cc data" style="WIDTH: 321px">{$Date_Time_value}</TD></TR>{END row_data}{END grid_row}</TABLE></DIV>{END grid_block}{END pages}{END container_grid}{END body}</BODY></HTML>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>{$caption dbo_Readings}</h1>
+<span>
+{BEGIN page_number}
+{mlang_message PAGE1} {$pageno} {mlang_message PAGE2} {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN Record_ID_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Record_ID_fieldheader}
+	<b>{$label dbo_Readings Record_ID}</b>
+	{END Record_ID_fieldheader}
+</td>
+{END Record_ID_fieldheadercolumn}
+	{BEGIN Module_ID_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Module_ID_fieldheader}
+	<b>{$label dbo_Readings Module_ID}</b>
+	{END Module_ID_fieldheader}
+</td>
+{END Module_ID_fieldheadercolumn}
+	{BEGIN Voltage_Red_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Voltage_Red_fieldheader}
+	<b>{$label dbo_Readings Voltage_Red}</b>
+	{END Voltage_Red_fieldheader}
+</td>
+{END Voltage_Red_fieldheadercolumn}
+	{BEGIN Voltage_Blue_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Voltage_Blue_fieldheader}
+	<b>{$label dbo_Readings Voltage_Blue}</b>
+	{END Voltage_Blue_fieldheader}
+</td>
+{END Voltage_Blue_fieldheadercolumn}
+	{BEGIN Voltage_Yellow_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Voltage_Yellow_fieldheader}
+	<b>{$label dbo_Readings Voltage_Yellow}</b>
+	{END Voltage_Yellow_fieldheader}
+</td>
+{END Voltage_Yellow_fieldheadercolumn}
+	{BEGIN Currunt_Red_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Currunt_Red_fieldheader}
+	<b>{$label dbo_Readings Currunt_Red}</b>
+	{END Currunt_Red_fieldheader}
+</td>
+{END Currunt_Red_fieldheadercolumn}
+	{BEGIN Currunt_Blue_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Currunt_Blue_fieldheader}
+	<b>{$label dbo_Readings Currunt_Blue}</b>
+	{END Currunt_Blue_fieldheader}
+</td>
+{END Currunt_Blue_fieldheadercolumn}
+	{BEGIN Currunt_Yellow_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Currunt_Yellow_fieldheader}
+	<b>{$label dbo_Readings Currunt_Yellow}</b>
+	{END Currunt_Yellow_fieldheader}
+</td>
+{END Currunt_Yellow_fieldheadercolumn}
+	{BEGIN PF_Red_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN PF_Red_fieldheader}
+	<b>{$label dbo_Readings PF_Red}</b>
+	{END PF_Red_fieldheader}
+</td>
+{END PF_Red_fieldheadercolumn}
+	{BEGIN PF_Blue_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN PF_Blue_fieldheader}
+	<b>{$label dbo_Readings PF_Blue}</b>
+	{END PF_Blue_fieldheader}
+</td>
+{END PF_Blue_fieldheadercolumn}
+	{BEGIN PF_Yellow_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN PF_Yellow_fieldheader}
+	<b>{$label dbo_Readings PF_Yellow}</b>
+	{END PF_Yellow_fieldheader}
+</td>
+{END PF_Yellow_fieldheadercolumn}
+	{BEGIN Peak_Power_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Peak_Power_fieldheader}
+	<b>{$label dbo_Readings Peak_Power}</b>
+	{END Peak_Power_fieldheader}
+</td>
+{END Peak_Power_fieldheadercolumn}
+	{BEGIN Date_Time_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Date_Time_fieldheader}
+	<b>{$label dbo_Readings Date_Time}</b>
+	{END Date_Time_fieldheader}
+</td>
+{END Date_Time_fieldheadercolumn}
+	{BEGIN IsSync_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN IsSync_fieldheader}
+	<b>{$label dbo_Readings IsSync}</b>
+	{END IsSync_fieldheader}
+</td>
+{END IsSync_fieldheadercolumn}
+	{BEGIN Currunt_Readings_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Currunt_Readings_fieldheader}
+	<b>{$label dbo_Readings Currunt_Readings}</b>
+	{END Currunt_Readings_fieldheader}
+</td>
+{END Currunt_Readings_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN Record_ID_fieldcolumn}
+<td  class="runner-cc" {$Record_ID_style}>
+	{$Record_ID_value}
+</td>
+{END Record_ID_fieldcolumn}
+	{BEGIN Module_ID_fieldcolumn}
+<td  class="runner-cc" {$Module_ID_style}>
+	{$Module_ID_value}
+</td>
+{END Module_ID_fieldcolumn}
+	{BEGIN Voltage_Red_fieldcolumn}
+<td  class="runner-cc" {$Voltage_Red_style}>
+	{$Voltage_Red_value}
+</td>
+{END Voltage_Red_fieldcolumn}
+	{BEGIN Voltage_Blue_fieldcolumn}
+<td  class="runner-cc" {$Voltage_Blue_style}>
+	{$Voltage_Blue_value}
+</td>
+{END Voltage_Blue_fieldcolumn}
+	{BEGIN Voltage_Yellow_fieldcolumn}
+<td  class="runner-cc" {$Voltage_Yellow_style}>
+	{$Voltage_Yellow_value}
+</td>
+{END Voltage_Yellow_fieldcolumn}
+	{BEGIN Currunt_Red_fieldcolumn}
+<td  class="runner-cc" {$Currunt_Red_style}>
+	{$Currunt_Red_value}
+</td>
+{END Currunt_Red_fieldcolumn}
+	{BEGIN Currunt_Blue_fieldcolumn}
+<td  class="runner-cc" {$Currunt_Blue_style}>
+	{$Currunt_Blue_value}
+</td>
+{END Currunt_Blue_fieldcolumn}
+	{BEGIN Currunt_Yellow_fieldcolumn}
+<td  class="runner-cc" {$Currunt_Yellow_style}>
+	{$Currunt_Yellow_value}
+</td>
+{END Currunt_Yellow_fieldcolumn}
+	{BEGIN PF_Red_fieldcolumn}
+<td  class="runner-cc" {$PF_Red_style}>
+	{$PF_Red_value}
+</td>
+{END PF_Red_fieldcolumn}
+	{BEGIN PF_Blue_fieldcolumn}
+<td  class="runner-cc" {$PF_Blue_style}>
+	{$PF_Blue_value}
+</td>
+{END PF_Blue_fieldcolumn}
+	{BEGIN PF_Yellow_fieldcolumn}
+<td  class="runner-cc" {$PF_Yellow_style}>
+	{$PF_Yellow_value}
+</td>
+{END PF_Yellow_fieldcolumn}
+	{BEGIN Peak_Power_fieldcolumn}
+<td  class="runner-cc" {$Peak_Power_style}>
+	{$Peak_Power_value}
+</td>
+{END Peak_Power_fieldcolumn}
+	{BEGIN Date_Time_fieldcolumn}
+<td  class="runner-cc" {$Date_Time_style}>
+	{$Date_Time_value}
+</td>
+{END Date_Time_fieldcolumn}
+	{BEGIN IsSync_fieldcolumn}
+<td  class="runner-cc" {$IsSync_style}>
+	{$IsSync_value}
+</td>
+{END IsSync_fieldcolumn}
+	{BEGIN Currunt_Readings_fieldcolumn}
+<td  class="runner-cc" {$Currunt_Readings_style}>
+	{$Currunt_Readings_value}
+</td>
+{END Currunt_Readings_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN Record_ID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Record_ID_fieldfootercolumn}
+{BEGIN Module_ID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Module_ID_fieldfootercolumn}
+{BEGIN Voltage_Red_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Voltage_Red_fieldfootercolumn}
+{BEGIN Voltage_Blue_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Voltage_Blue_fieldfootercolumn}
+{BEGIN Voltage_Yellow_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Voltage_Yellow_fieldfootercolumn}
+{BEGIN Currunt_Red_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Currunt_Red_fieldfootercolumn}
+{BEGIN Currunt_Blue_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Currunt_Blue_fieldfootercolumn}
+{BEGIN Currunt_Yellow_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Currunt_Yellow_fieldfootercolumn}
+{BEGIN PF_Red_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END PF_Red_fieldfootercolumn}
+{BEGIN PF_Blue_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END PF_Blue_fieldfootercolumn}
+{BEGIN PF_Yellow_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END PF_Yellow_fieldfootercolumn}
+{BEGIN Peak_Power_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Peak_Power_fieldfootercolumn}
+{BEGIN Date_Time_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Date_Time_fieldfootercolumn}
+{BEGIN IsSync_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END IsSync_fieldfootercolumn}
+{BEGIN Currunt_Readings_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Currunt_Readings_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

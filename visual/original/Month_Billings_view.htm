@@ -1,0 +1,265 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_view}
+<table class="runner-c runner-c-view" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-viewheader {$brickclass_viewheader}">{$caption dbo_Month_Billings}, {mlang_message VIEW_RECORD} [
+{$label dbo_Month_Billings Bill_ID}: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+	{BEGIN Bill_ID_fieldblock}
+	<tr class="runner-toprow header style1 runner-b-viewfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Bill_ID}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Bill_ID_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END Bill_ID_fieldblock}
+	{BEGIN Module_ID_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Module_ID}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Module_ID_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Module_ID_fieldblock}
+	{BEGIN Customer_ID_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Customer_ID}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Customer_ID_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Customer_ID_fieldblock}
+	{BEGIN Billing_Month_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Billing_Month}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Billing_Month_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Billing_Month_fieldblock}
+	{BEGIN Previous_Readings_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Previous_Readings}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Previous_Readings_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Previous_Readings_fieldblock}
+	{BEGIN Currunt_Readings_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Currunt_Readings}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Currunt_Readings_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Currunt_Readings_fieldblock}
+	{BEGIN Unit_Consumed_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Unit_Consumed}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Unit_Consumed_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Unit_Consumed_fieldblock}
+	{BEGIN Bill_Amount_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Bill_Amount}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Bill_Amount_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Bill_Amount_fieldblock}
+	{BEGIN Amount_After_Due_Date_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Amount_After_Due_Date}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Amount_After_Due_Date_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Amount_After_Due_Date_fieldblock}
+	{BEGIN Payment_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Payment}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Payment_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Payment_fieldblock}
+	{BEGIN Arrears_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Arrears}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Arrears_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Arrears_fieldblock}
+	{BEGIN From_Date_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings From_Date}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$From_Date_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END From_Date_fieldblock}
+	{BEGIN To_Date_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings To_Date}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$To_Date_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END To_Date_fieldblock}
+	{BEGIN Due_Date_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Due_Date}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Due_Date_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Due_Date_fieldblock}
+	{BEGIN Date_Generated_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+			<b>{$label dbo_Month_Billings Date_Generated}</b>
+		</td>
+		<td class="runner-cc alt">
+			{$Date_Generated_value}&nbsp;
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Date_Generated_fieldblock}
+
+
+
+
+<tr  class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" onclick="window.location.href='Month_Billings_list.php?a=return'" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_view}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_view}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

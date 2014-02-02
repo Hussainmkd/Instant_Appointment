@@ -1,0 +1,882 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_toplinks}
+<table class="runner-c runner-c-toplinks" cellpadding="0" >
+<tr class="{$cheaderclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN security_block}
+<td  class="runner-cc runner-bl runner-b-loggedas" {$brickclass_loggedas}><span><span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span>
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log out</a>
+</span>
+
+</span></td>
+{END security_block}
+
+
+{BEGIN prints_block}
+<td  class="runner-cc runner-bl runner-b-toplinks_print" {$brickclass_toplinks_print}><span>{BEGIN print_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printlink_attrs}>Print this page</a>
+	</span>
+{END print_link}
+
+{BEGIN printall_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printalllink_attrs}>Print all pages</a>
+	</span>
+{END printall_link}
+
+
+
+
+</span></td>
+{END prints_block}
+
+
+{BEGIN asearch_link}
+<td  class="runner-cc runner-bl runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$advsearchlink_attrs}>Advanced search</a>
+	</span>
+</span></td>
+{END asearch_link}
+
+
+
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+
+{BEGIN container_hmenu}
+<table class="runner-c runner-c-hmenu" cellpadding="0" >
+<tr class="{$cheaderclass_hmenu}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN menu_block}
+<td  class="runner-cc runner-bl runner-b-hmenu" {$brickclass_hmenu}><span>{$mainmenu horizontal}
+</span></td>
+{END menu_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_hmenu}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_hmenu}
+
+
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" >
+<tr class="{$cheaderclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN searchform_block}
+<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span>	<span>  
+		{BEGIN searchform_text}
+		<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" {$searchbutton_attrs}><img src="images/search/search.gif"></a>
+		</span>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}	
+		<span id="showAll{$id}" {$showAllCont_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$showallbutton_attrs}>Show all</a></span>		
+		</span>
+		{END searchform_showall}
+	</span>
+</span></td>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}
+<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>	{BEGIN searchPanelTopButtons}
+	<span>
+		&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
+		</span>
+		&nbsp;		
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
+		</span>
+	</span>
+	{END searchPanelTopButtons}
+</span></td>
+{END searchformbuttons_block}
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}
+<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span>	<span {$details_attrs}>
+		Details found: <b><span class="runner-details_found_count">{$records_found}</span></b>
+	</span>
+</span></td>
+{END details_block}
+
+
+{BEGIN pages_block}
+<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span>	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</span></td>
+{END pages_block}
+
+
+{BEGIN recordspp_block}
+<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span>	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</span></td>
+{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+
+{BEGIN container_left}
+<table class="runner-c runner-c-left" cellpadding="0" >
+<tr class="{$cheaderclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN searchPanel}
+<tr  class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="searchPanelContainer">
+{$adv_search_panel}
+</div></td><td class="runner-cr"></td></tr>{END searchPanel}
+
+
+<tr class="{$cfooterclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_left}
+
+
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_bigblock}
+<table class="runner-c runner-c-bigblock" cellpadding="0" >
+<tr class="{$cheaderclass_bigblock}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_recordcontrols}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_recordcontrols}
+<table class="runner-c runner-c-recordcontrols" cellpadding="0" >
+<tr class="{$cheaderclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+<td class="runner-cc filler"></td>
+
+{BEGIN record_controls}
+<td  class="runner-cc runner-br runner-b-recordcontrol" {$brickclass_recordcontrol}><span><span id="record_controls{$id}">
+	
+	
+	
+	
+		{BEGIN printselected_link}
+		<span class="runner-btnframe" {$printselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$printselectedlink_attrs}>Print selected</a>
+		</span>
+	{END printselected_link}
+</span>
+</span></td>
+{END record_controls}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_recordcontrols}
+
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_message}
+<table class="runner-c runner-c-message" cellpadding="0" >
+<tr class="{$cheaderclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN message_block}
+<td  class="runner-cc runner-bc runner-b-message" {$brickclass_message}><span>{$message}</span></td>
+{END message_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_message}
+
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_grid}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+						<table class="runner-c runner-c-grid runner-b-grid" cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="runner-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									<th class="runner-cl"><img src="images/spacer.gif"></th>
+																		{BEGIN listIcons_column}
+									<th class="runner-cc" iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="runner-cc runner-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																										{BEGIN Phase_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Phase_fieldheader}
+																				<a {$Phase_orderlinkattrs}>
+											Phase
+										</a>
+									{END Phase_fieldheader}
+									</th>
+									{END Phase_fieldheadercolumn}
+
+																	{BEGIN Customer_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Customer_fieldheader}
+																				<a {$Customer_orderlinkattrs}>
+											Customer
+										</a>
+									{END Customer_fieldheader}
+									</th>
+									{END Customer_fieldheadercolumn}
+
+																	{BEGIN RDC_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN RDC_fieldheader}
+																				<a {$RDC_orderlinkattrs}>
+											RDC
+										</a>
+									{END RDC_fieldheader}
+									</th>
+									{END RDC_fieldheadercolumn}
+
+																	{BEGIN SMID_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN SMID_fieldheader}
+																				<a {$SMID_orderlinkattrs}>
+											SMID
+										</a>
+									{END SMID_fieldheader}
+									</th>
+									{END SMID_fieldheadercolumn}
+
+																	{BEGIN AMID_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN AMID_fieldheader}
+																				<a {$AMID_orderlinkattrs}>
+											AMID
+										</a>
+									{END AMID_fieldheader}
+									</th>
+									{END AMID_fieldheadercolumn}
+
+																	{BEGIN VoltageRed_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN VoltageRed_fieldheader}
+																				<a {$VoltageRed_orderlinkattrs}>
+											Voltage Red
+										</a>
+									{END VoltageRed_fieldheader}
+									</th>
+									{END VoltageRed_fieldheadercolumn}
+
+																	{BEGIN VoltageBlue_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN VoltageBlue_fieldheader}
+																				<a {$VoltageBlue_orderlinkattrs}>
+											Voltage Blue
+										</a>
+									{END VoltageBlue_fieldheader}
+									</th>
+									{END VoltageBlue_fieldheadercolumn}
+
+																	{BEGIN VoltageYellow_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN VoltageYellow_fieldheader}
+																				<a {$VoltageYellow_orderlinkattrs}>
+											Voltage Yellow
+										</a>
+									{END VoltageYellow_fieldheader}
+									</th>
+									{END VoltageYellow_fieldheadercolumn}
+
+																	{BEGIN CurruntRed_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN CurruntRed_fieldheader}
+																				<a {$CurruntRed_orderlinkattrs}>
+											Currunt Red
+										</a>
+									{END CurruntRed_fieldheader}
+									</th>
+									{END CurruntRed_fieldheadercolumn}
+
+																	{BEGIN CurruntBlue_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN CurruntBlue_fieldheader}
+																				<a {$CurruntBlue_orderlinkattrs}>
+											Currunt Blue
+										</a>
+									{END CurruntBlue_fieldheader}
+									</th>
+									{END CurruntBlue_fieldheadercolumn}
+
+																	{BEGIN CurruntYellow_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN CurruntYellow_fieldheader}
+																				<a {$CurruntYellow_orderlinkattrs}>
+											Currunt Yellow
+										</a>
+									{END CurruntYellow_fieldheader}
+									</th>
+									{END CurruntYellow_fieldheadercolumn}
+
+																	{BEGIN PowerRed_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN PowerRed_fieldheader}
+																				<a {$PowerRed_orderlinkattrs}>
+											Power Red
+										</a>
+									{END PowerRed_fieldheader}
+									</th>
+									{END PowerRed_fieldheadercolumn}
+
+																	{BEGIN PowerBlue_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN PowerBlue_fieldheader}
+																				<a {$PowerBlue_orderlinkattrs}>
+											Power Blue
+										</a>
+									{END PowerBlue_fieldheader}
+									</th>
+									{END PowerBlue_fieldheadercolumn}
+
+																	{BEGIN PowerYellow_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN PowerYellow_fieldheader}
+																				<a {$PowerYellow_orderlinkattrs}>
+											Power Yellow
+										</a>
+									{END PowerYellow_fieldheader}
+									</th>
+									{END PowerYellow_fieldheadercolumn}
+
+																	{BEGIN PFRed_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN PFRed_fieldheader}
+																				<a {$PFRed_orderlinkattrs}>
+											PF Red
+										</a>
+									{END PFRed_fieldheader}
+									</th>
+									{END PFRed_fieldheadercolumn}
+
+																	{BEGIN PFBlue_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN PFBlue_fieldheader}
+																				<a {$PFBlue_orderlinkattrs}>
+											PF Blue
+										</a>
+									{END PFBlue_fieldheader}
+									</th>
+									{END PFBlue_fieldheadercolumn}
+
+																	{BEGIN PFYellow_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN PFYellow_fieldheader}
+																				<a {$PFYellow_orderlinkattrs}>
+											PF Yellow
+										</a>
+									{END PFYellow_fieldheader}
+									</th>
+									{END PFYellow_fieldheadercolumn}
+
+																	{BEGIN DateTime_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DateTime_fieldheader}
+																				<a {$DateTime_orderlinkattrs}>
+											Date Time
+										</a>
+									{END DateTime_fieldheader}
+									</th>
+									{END DateTime_fieldheadercolumn}
+
+																	{BEGIN Billing_fieldheadercolumn}
+									<th class="runner-cc runner-clast">
+									{BEGIN Billing_fieldheader}
+																				<a {$Billing_orderlinkattrs}>
+											Billing
+										</a>
+									{END Billing_fieldheader}
+									</th>
+									{END Billing_fieldheadercolumn}
+
+
+									
+									<th class="runner-cr"><img src="images/spacer.gif"></th>
+									{BEGIN endrecordheader_block}
+									<th class="runner-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="runner-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									<td class="runner-cl"></td>
+
+																		{BEGIN listIcons_column}
+									<td class="runner-cc runner-bc runner-icons" iEditCont="all">
+									
+									
+									
+																		</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="runner-cc runner-bc" iEditCont="checkBox">
+									{BEGIN checkbox}
+									<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN Phase_fieldcolumn}
+	<td class="runner-cc " {$Phase_style}>
+		{$Phase_value}
+	</td>
+{END Phase_fieldcolumn}
+
+	{BEGIN Customer_fieldcolumn}
+	<td class="runner-cc " {$Customer_style}>
+		{$Customer_value}
+	</td>
+{END Customer_fieldcolumn}
+
+	{BEGIN RDC_fieldcolumn}
+	<td class="runner-cc " {$RDC_style}>
+		{$RDC_value}
+	</td>
+{END RDC_fieldcolumn}
+
+	{BEGIN SMID_fieldcolumn}
+	<td class="runner-cc " {$SMID_style}>
+		{$SMID_value}
+	</td>
+{END SMID_fieldcolumn}
+
+	{BEGIN AMID_fieldcolumn}
+	<td class="runner-cc " {$AMID_style}>
+		{$AMID_value}
+	</td>
+{END AMID_fieldcolumn}
+
+	{BEGIN VoltageRed_fieldcolumn}
+	<td class="runner-cc " {$VoltageRed_style}>
+		{$VoltageRed_value}
+	</td>
+{END VoltageRed_fieldcolumn}
+
+	{BEGIN VoltageBlue_fieldcolumn}
+	<td class="runner-cc " {$VoltageBlue_style}>
+		{$VoltageBlue_value}
+	</td>
+{END VoltageBlue_fieldcolumn}
+
+	{BEGIN VoltageYellow_fieldcolumn}
+	<td class="runner-cc " {$VoltageYellow_style}>
+		{$VoltageYellow_value}
+	</td>
+{END VoltageYellow_fieldcolumn}
+
+	{BEGIN CurruntRed_fieldcolumn}
+	<td class="runner-cc " {$CurruntRed_style}>
+		{$CurruntRed_value}
+	</td>
+{END CurruntRed_fieldcolumn}
+
+	{BEGIN CurruntBlue_fieldcolumn}
+	<td class="runner-cc " {$CurruntBlue_style}>
+		{$CurruntBlue_value}
+	</td>
+{END CurruntBlue_fieldcolumn}
+
+	{BEGIN CurruntYellow_fieldcolumn}
+	<td class="runner-cc " {$CurruntYellow_style}>
+		{$CurruntYellow_value}
+	</td>
+{END CurruntYellow_fieldcolumn}
+
+	{BEGIN PowerRed_fieldcolumn}
+	<td class="runner-cc " {$PowerRed_style}>
+		{$PowerRed_value}
+	</td>
+{END PowerRed_fieldcolumn}
+
+	{BEGIN PowerBlue_fieldcolumn}
+	<td class="runner-cc " {$PowerBlue_style}>
+		{$PowerBlue_value}
+	</td>
+{END PowerBlue_fieldcolumn}
+
+	{BEGIN PowerYellow_fieldcolumn}
+	<td class="runner-cc " {$PowerYellow_style}>
+		{$PowerYellow_value}
+	</td>
+{END PowerYellow_fieldcolumn}
+
+	{BEGIN PFRed_fieldcolumn}
+	<td class="runner-cc " {$PFRed_style}>
+		{$PFRed_value}
+	</td>
+{END PFRed_fieldcolumn}
+
+	{BEGIN PFBlue_fieldcolumn}
+	<td class="runner-cc " {$PFBlue_style}>
+		{$PFBlue_value}
+	</td>
+{END PFBlue_fieldcolumn}
+
+	{BEGIN PFYellow_fieldcolumn}
+	<td class="runner-cc " {$PFYellow_style}>
+		{$PFYellow_value}
+	</td>
+{END PFYellow_fieldcolumn}
+
+	{BEGIN DateTime_fieldcolumn}
+	<td class="runner-cc " {$DateTime_style}>
+		{$DateTime_value}
+	</td>
+{END DateTime_fieldcolumn}
+
+	{BEGIN Billing_fieldcolumn}
+	<td class="runner-cc runner-clast" {$Billing_style}>
+		{$Billing_value}
+	</td>
+{END Billing_fieldcolumn}
+
+
+																		<td class="runner-cr"></td>
+									{BEGIN endrecord_block}
+									<td class="runner-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+															{BEGIN grid_footer}
+																<tr class="runner-bottomrow style1{$gridFooter_class}" >
+									{BEGIN record_footer}
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+																		{BEGIN listIcons_column}
+									<td class="runner-cc"></td>
+									{END listIcons_column}	
+									
+																		{BEGIN checkbox_column}
+									<td class="runner-cc"></td>
+									{END checkbox_column}
+
+
+									{BEGIN Phase_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Phase_fieldheadercolumn}
+{BEGIN Customer_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Customer_fieldheadercolumn}
+{BEGIN RDC_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END RDC_fieldheadercolumn}
+{BEGIN SMID_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END SMID_fieldheadercolumn}
+{BEGIN AMID_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END AMID_fieldheadercolumn}
+{BEGIN VoltageRed_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END VoltageRed_fieldheadercolumn}
+{BEGIN VoltageBlue_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END VoltageBlue_fieldheadercolumn}
+{BEGIN VoltageYellow_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END VoltageYellow_fieldheadercolumn}
+{BEGIN CurruntRed_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END CurruntRed_fieldheadercolumn}
+{BEGIN CurruntBlue_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END CurruntBlue_fieldheadercolumn}
+{BEGIN CurruntYellow_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END CurruntYellow_fieldheadercolumn}
+{BEGIN PowerRed_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END PowerRed_fieldheadercolumn}
+{BEGIN PowerBlue_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END PowerBlue_fieldheadercolumn}
+{BEGIN PowerYellow_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END PowerYellow_fieldheadercolumn}
+{BEGIN PFRed_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END PFRed_fieldheadercolumn}
+{BEGIN PFBlue_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END PFBlue_fieldheadercolumn}
+{BEGIN PFYellow_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END PFYellow_fieldheadercolumn}
+{BEGIN DateTime_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DateTime_fieldheadercolumn}
+{BEGIN Billing_fieldheadercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Billing_fieldheadercolumn}
+
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									
+									
+									{BEGIN endrecordfooter_block}
+									<td class="runner-cs"></td>
+									{END endrecordfooter_block}
+									{END record_footer}
+								</tr>
+								{END grid_footer}
+
+						</tbody>
+					</table>
+					
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_pagination}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_pagination}
+<table class="runner-c runner-c-pagination" cellpadding="0" >
+<tr class="{$cheaderclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN pagination_block}
+<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+{END pagination_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pagination}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_bigblock}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_bigblock}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

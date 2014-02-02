@@ -1,0 +1,64 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		{mlang_message SEARCH_CRITERIA}:&nbsp;
+		<input type="radio" name="srchType" {$all_checkbox}>{BEGIN all_checkbox_label}{mlang_message SEARCH_ALL}{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" {$any_checkbox}>{BEGIN any_checkbox_label}{mlang_message SEARCH_ANY}{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>{mlang_message SEARCH_ADD_FIELD}</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_ID}
+			<a href="#" id="addSearchControl_ID" class="addSearchControl" {$addSearchControl_ID_attrs}>{$label dbo_Module ID}</a><br>
+		{END addSearch_ID}
+		{BEGIN addSearch_Module_Type}
+			<a href="#" id="addSearchControl_Module_Type" class="addSearchControl" {$addSearchControl_Module_Type_attrs}>{$label dbo_Module Module_Type}</a><br>
+		{END addSearch_Module_Type}
+		{BEGIN addSearch_Module_Status}
+			<a href="#" id="addSearchControl_Module_Status" class="addSearchControl" {$addSearchControl_Module_Status_attrs}>{$label dbo_Module Module_Status}</a><br>
+		{END addSearch_Module_Status}
+		{BEGIN addSearch_Module_Condition}
+			<a href="#" id="addSearchControl_Module_Condition" class="addSearchControl" {$addSearchControl_Module_Condition_attrs}>{$label dbo_Module Module_Condition}</a><br>
+		{END addSearch_Module_Condition}
+		{BEGIN addSearch_Serial_Num}
+			<a href="#" id="addSearchControl_Serial_Num" class="addSearchControl" {$addSearchControl_Serial_Num_attrs}>{$label dbo_Module Serial_Num}</a><br>
+		{END addSearch_Serial_Num}
+		{BEGIN addSearch_Entry_Date}
+			<a href="#" id="addSearchControl_Entry_Date" class="addSearchControl" {$addSearchControl_Entry_Date_attrs}>{$label dbo_Module Entry_Date}</a><br>
+		{END addSearch_Entry_Date}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</td>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>{mlang_message SEARCH}</a>
+		</span>
+	</div>
+</div>

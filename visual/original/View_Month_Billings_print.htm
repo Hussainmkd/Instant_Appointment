@@ -1,0 +1,201 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>{$caption dbo_View_Month_Billings}</h1>
+<span>
+{BEGIN page_number}
+{mlang_message PAGE1} {$pageno} {mlang_message PAGE2} {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">		
+	<table class="runner-c-grid" cellpadding="0">
+	{BEGIN grid_row}
+		<tr {$rowattrs} {$rowstyle}>
+			{BEGIN grid_record}
+			<td class="runner-cg">
+				<table class="runner-c" cellpadding="0">
+					<tr class="runner-toprow style1">
+						<td class="runner-cl"><img src="images/spacer.gif"/></td>
+						<td class="runner-cc"></td>
+						<td class="runner-cc"></td>
+						<td class="runner-cr"><img src="images/spacer.gif"/></td>
+					</tr>
+						<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Bill_ID}</td>
+	<td class="runner-cc runner-cc2"{$Bill_ID_style}>{$Bill_ID_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Billing_Month}</td>
+	<td class="runner-cc runner-cc2"{$Billing_Month_style}>{$Billing_Month_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Previous_Readings}</td>
+	<td class="runner-cc runner-cc2"{$Previous_Readings_style}>{$Previous_Readings_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Currunt_Readings}</td>
+	<td class="runner-cc runner-cc2"{$Currunt_Readings_style}>{$Currunt_Readings_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Unit_Consumed}</td>
+	<td class="runner-cc runner-cc2"{$Unit_Consumed_style}>{$Unit_Consumed_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Bill_Amount}</td>
+	<td class="runner-cc runner-cc2"{$Bill_Amount_style}>{$Bill_Amount_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Amount_After_Due_Date}</td>
+	<td class="runner-cc runner-cc2"{$Amount_After_Due_Date_style}>{$Amount_After_Due_Date_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Payment}</td>
+	<td class="runner-cc runner-cc2"{$Payment_style}>{$Payment_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Arrears}</td>
+	<td class="runner-cc runner-cc2"{$Arrears_style}>{$Arrears_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings From_Date}</td>
+	<td class="runner-cc runner-cc2"{$From_Date_style}>{$From_Date_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings To_Date}</td>
+	<td class="runner-cc runner-cc2"{$To_Date_style}>{$To_Date_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Due_Date}</td>
+	<td class="runner-cc runner-cc2"{$Due_Date_style}>{$Due_Date_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Date_Generated}</td>
+	<td class="runner-cc runner-cc2"{$Date_Generated_style}>{$Date_Generated_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings Module}</td>
+	<td class="runner-cc runner-cc2"{$Module_style}>{$Module_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+	<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">{$label dbo_View_Month_Billings CustomerID}</td>
+	<td class="runner-cc runner-cc2"{$CustomerID_style}>{$CustomerID_value}</td>
+	<td class="runner-cr"></td>
+</tr>
+
+					<tr class="runner-bottomrow style1">
+						<td class="runner-cl"><img src="images/spacer.gif"/></td>
+						<td class="runner-cc"></td>
+						<td class="runner-cc"></td>
+						<td class="runner-cr"><img src="images/spacer.gif"/></td>
+					</tr>
+				</table>
+			</td>
+			{BEGIN endrecord_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecord_block}
+			{END grid_record}
+		</tr>
+		{BEGIN grid_rowspace}
+		<tr class="runner-rs">
+			{BEGIN grid_recordspace}
+			<td >&nbsp;</td>
+			{END grid_recordspace}
+		</tr>
+		{END grid_rowspace}
+	{END grid_row}
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

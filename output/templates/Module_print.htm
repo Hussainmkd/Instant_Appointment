@@ -1,0 +1,238 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>{$caption dbo_Module}</h1>
+<span>
+{BEGIN page_number}
+{mlang_message PAGE1} {$pageno} {mlang_message PAGE2} {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN ID_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN ID_fieldheader}
+	<b>{$label dbo_Module ID}</b>
+	{END ID_fieldheader}
+</td>
+{END ID_fieldheadercolumn}
+	{BEGIN Module_Type_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Module_Type_fieldheader}
+	<b>{$label dbo_Module Module_Type}</b>
+	{END Module_Type_fieldheader}
+</td>
+{END Module_Type_fieldheadercolumn}
+	{BEGIN Module_Status_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Module_Status_fieldheader}
+	<b>{$label dbo_Module Module_Status}</b>
+	{END Module_Status_fieldheader}
+</td>
+{END Module_Status_fieldheadercolumn}
+	{BEGIN Module_Condition_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Module_Condition_fieldheader}
+	<b>{$label dbo_Module Module_Condition}</b>
+	{END Module_Condition_fieldheader}
+</td>
+{END Module_Condition_fieldheadercolumn}
+	{BEGIN Serial_Num_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Serial_Num_fieldheader}
+	<b>{$label dbo_Module Serial_Num}</b>
+	{END Serial_Num_fieldheader}
+</td>
+{END Serial_Num_fieldheadercolumn}
+	{BEGIN Entry_Date_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Entry_Date_fieldheader}
+	<b>{$label dbo_Module Entry_Date}</b>
+	{END Entry_Date_fieldheader}
+</td>
+{END Entry_Date_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN ID_fieldcolumn}
+<td  class="runner-cc" {$ID_style}>
+	{$ID_value}
+</td>
+{END ID_fieldcolumn}
+	{BEGIN Module_Type_fieldcolumn}
+<td  class="runner-cc" {$Module_Type_style}>
+	{$Module_Type_value}
+</td>
+{END Module_Type_fieldcolumn}
+	{BEGIN Module_Status_fieldcolumn}
+<td  class="runner-cc" {$Module_Status_style}>
+	{$Module_Status_value}
+</td>
+{END Module_Status_fieldcolumn}
+	{BEGIN Module_Condition_fieldcolumn}
+<td  class="runner-cc" {$Module_Condition_style}>
+	{$Module_Condition_value}
+</td>
+{END Module_Condition_fieldcolumn}
+	{BEGIN Serial_Num_fieldcolumn}
+<td  class="runner-cc" {$Serial_Num_style}>
+	{$Serial_Num_value}
+</td>
+{END Serial_Num_fieldcolumn}
+	{BEGIN Entry_Date_fieldcolumn}
+<td  class="runner-cc" {$Entry_Date_style}>
+	{$Entry_Date_value}
+</td>
+{END Entry_Date_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN ID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ID_fieldfootercolumn}
+{BEGIN Module_Type_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Module_Type_fieldfootercolumn}
+{BEGIN Module_Status_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Module_Status_fieldfootercolumn}
+{BEGIN Module_Condition_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Module_Condition_fieldfootercolumn}
+{BEGIN Serial_Num_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Serial_Num_fieldfootercolumn}
+{BEGIN Entry_Date_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Entry_Date_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

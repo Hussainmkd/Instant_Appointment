@@ -1,0 +1,808 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_toplinks}
+<table class="runner-c runner-c-toplinks" cellpadding="0" >
+<tr class="{$cheaderclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN security_block}
+<td  class="runner-cc runner-bl runner-b-loggedas" {$brickclass_loggedas}><span><span>{mlang_message LOGGED_AS}&nbsp;<b>{$username}</b>&nbsp;</span>
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>{mlang_message LOG_OUT}</a>
+</span>
+
+</span></td>
+{END security_block}
+
+
+{BEGIN asearch_link}
+<td  class="runner-cc runner-bl runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$advsearchlink_attrs}>{mlang_message ADVANCED_SEARCH}</a>
+	</span>
+</span></td>
+{END asearch_link}
+
+
+{BEGIN export_link}
+<td  class="runner-cc runner-bl runner-b-toplinks_export" {$brickclass_toplinks_export}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a target="_blank" href="View_1_export.php" class="runner-button" {$exportlink_attrs}>{mlang_message EXPORT_RESULTS}</a>
+	</span>
+</span></td>
+{END export_link}
+
+
+{BEGIN prints_block}
+<td  class="runner-cc runner-bl runner-b-toplinks_print" {$brickclass_toplinks_print}><span>{BEGIN print_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printlink_attrs}>{mlang_message PRINT_THIS_PAGE}</a>
+	</span>
+{END print_link}
+
+{BEGIN printall_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printalllink_attrs}>{mlang_message PRINT_ALL_PAGES}</a>
+	</span>
+{END printall_link}
+
+
+
+
+</span></td>
+{END prints_block}
+
+
+{BEGIN import_link}
+<td  class="runner-cc runner-bl runner-b-toplinks_import" {$brickclass_toplinks_import}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="View_1_import.php?{$crosstable_attrs}" class="runner-button" {$importlink_attrs}>{mlang_message IMPORT}</a>
+	</span>
+</span></td>
+{END import_link}
+
+
+
+{BEGIN languages_block}
+<td  class="runner-cc runner-bl runner-b-languages" {$brickclass_languages}><span>	<span>
+		<b>{BEGIN lang_label}{mlang_message LANGUAGE}:{END lang_label}</b>&nbsp;
+		<select {$langselector_attrs}>
+			<option value="English" {$English_langattrs}>English</option>
+			<option value="Urdu" {$Urdu_langattrs}>اُردو</option>
+		</select>
+	</span>	
+
+</span></td>
+{END languages_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+
+{BEGIN container_left}
+<table class="runner-c runner-c-left" cellpadding="0" >
+<tr class="{$cheaderclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN menu_block}
+{$mainmenu}
+{END menu_block}
+
+
+{BEGIN searchform_block}
+<tr  class="runner-row style1 runner-b-vsearch1 {$brickclass_vsearch1}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >	{mlang_message SEARCH_FOR}:
+	{BEGIN searchPanelTopButtons}	
+	<span>
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
+	</span>
+	&nbsp;		
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
+	</span>
+	</span>
+	{END searchPanelTopButtons}
+</td><td class="runner-cr"></td></tr>{END searchform_block}
+
+
+{BEGIN searchform_block}
+<tr  class="runner-row style1 runner-b-vsearch2 {$brickclass_vsearch2}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div>
+	<span>
+		{BEGIN searchform_text}
+			<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+			<span class="runner-btnframe">
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button-img" {$searchbutton_attrs}><img src="images/search/search.gif"></a>
+			</span>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}
+			<span class="runner-btnframe" {$showAllCont_attrs}>
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a class="runner-button" href="#" {$showallbutton_attrs}>{mlang_message SHOW_ALL}</a>
+			</span>
+		{END searchform_showall}
+	</span>	
+</div>
+</td><td class="runner-cr"></td></tr>{END searchform_block}
+
+
+{BEGIN details_block}
+<tr  class="runner-row style2 runner-b-vdetails_found {$brickclass_vdetails_found}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><span  {$details_attrs}>{mlang_message DETAILS_FOUND}: <span class="runner-details_found_count">{$records_found}</span></span>
+</td><td class="runner-cr"></td></tr>{END details_block}
+
+
+{BEGIN pages_block}
+<tr  class="runner-row style1 runner-b-vpage_of {$brickclass_vpage_of}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><span id="pages_block{$id}">
+	<span {$pages_attrs}>{mlang_message PAGE1} {$page} {mlang_message PAGE2} {$maxpages}</span>
+</span>
+</td><td class="runner-cr"></td></tr>{END pages_block}
+
+
+{BEGIN recordspp_block}
+<tr  class="runner-row style1 runner-b-vrecsperpage {$brickclass_vrecsperpage}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><span id="recordspp_block{$id}" name="recordspp_block{$id}">
+	{mlang_message RECORDS_PP}:&nbsp;{$recsPerPage}
+</span>
+</td><td class="runner-cr"></td></tr>{END recordspp_block}
+
+
+{BEGIN searchPanel}
+<tr  class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="searchPanelContainer">
+{$adv_search_panel}
+</div></td><td class="runner-cr"></td></tr>{END searchPanel}
+
+
+<tr class="{$cfooterclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_left}
+
+
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_bigblock}
+<table class="runner-c runner-c-bigblock" cellpadding="0" >
+<tr class="{$cheaderclass_bigblock}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+
+<tr  class="runner-row style2 runner-b-wrapper {$wrapperclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_message}
+<table class="runner-c runner-c-message" cellpadding="0" >
+<tr class="{$cheaderclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN message_block}
+<td  class="runner-cc runner-bc runner-b-message" {$brickclass_message}><span>{$message}</span></td>
+{END message_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_message}
+
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style2 runner-b-wrapper {$wrapperclass_grid}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+						<table class="runner-c runner-c-grid runner-b-grid" cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="runner-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									<th class="runner-cl"><img src="images/spacer.gif"></th>
+																		{BEGIN listIcons_column}
+									<th class="runner-cc" iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+									
+																										{BEGIN Expr1_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Expr1_fieldheader}
+																				<a {$Expr1_orderlinkattrs}>
+											{$label dbo_View_1 Expr1}
+										</a>
+									{END Expr1_fieldheader}
+									</th>
+									{END Expr1_fieldheadercolumn}
+
+																	{BEGIN Name_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Name_fieldheader}
+																				<a {$Name_orderlinkattrs}>
+											{$label dbo_View_1 Name}
+										</a>
+									{END Name_fieldheader}
+									</th>
+									{END Name_fieldheadercolumn}
+
+																	{BEGIN Father_Name_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Father_Name_fieldheader}
+																				<a {$Father_Name_orderlinkattrs}>
+											{$label dbo_View_1 Father_Name}
+										</a>
+									{END Father_Name_fieldheader}
+									</th>
+									{END Father_Name_fieldheadercolumn}
+
+																	{BEGIN Address_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Address_fieldheader}
+																				<a {$Address_orderlinkattrs}>
+											{$label dbo_View_1 Address}
+										</a>
+									{END Address_fieldheader}
+									</th>
+									{END Address_fieldheadercolumn}
+
+																	{BEGIN Contact_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Contact_fieldheader}
+																				<a {$Contact_orderlinkattrs}>
+											{$label dbo_View_1 Contact}
+										</a>
+									{END Contact_fieldheader}
+									</th>
+									{END Contact_fieldheadercolumn}
+
+																	{BEGIN Location_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Location_fieldheader}
+																				<a {$Location_orderlinkattrs}>
+											{$label dbo_View_1 Location}
+										</a>
+									{END Location_fieldheader}
+									</th>
+									{END Location_fieldheadercolumn}
+
+																	{BEGIN Customer_Type_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Customer_Type_fieldheader}
+																				<a {$Customer_Type_orderlinkattrs}>
+											{$label dbo_View_1 Customer_Type}
+										</a>
+									{END Customer_Type_fieldheader}
+									</th>
+									{END Customer_Type_fieldheadercolumn}
+
+																	{BEGIN Module_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Module_fieldheader}
+																				<a {$Module_orderlinkattrs}>
+											{$label dbo_View_1 Module}
+										</a>
+									{END Module_fieldheader}
+									</th>
+									{END Module_fieldheadercolumn}
+
+																	{BEGIN Password_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Password_fieldheader}
+																				<a {$Password_orderlinkattrs}>
+											{$label dbo_View_1 Password}
+										</a>
+									{END Password_fieldheader}
+									</th>
+									{END Password_fieldheadercolumn}
+
+																	{BEGIN Role_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Role_fieldheader}
+																				<a {$Role_orderlinkattrs}>
+											{$label dbo_View_1 Role}
+										</a>
+									{END Role_fieldheader}
+									</th>
+									{END Role_fieldheadercolumn}
+
+																	{BEGIN Module_Type_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Module_Type_fieldheader}
+																				<a {$Module_Type_orderlinkattrs}>
+											{$label dbo_View_1 Module_Type}
+										</a>
+									{END Module_Type_fieldheader}
+									</th>
+									{END Module_Type_fieldheadercolumn}
+
+																	{BEGIN Module_Condition_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Module_Condition_fieldheader}
+																				<a {$Module_Condition_orderlinkattrs}>
+											{$label dbo_View_1 Module_Condition}
+										</a>
+									{END Module_Condition_fieldheader}
+									</th>
+									{END Module_Condition_fieldheadercolumn}
+
+																	{BEGIN Entry_Date_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Entry_Date_fieldheader}
+																				<a {$Entry_Date_orderlinkattrs}>
+											{$label dbo_View_1 Entry_Date}
+										</a>
+									{END Entry_Date_fieldheader}
+									</th>
+									{END Entry_Date_fieldheadercolumn}
+
+																	{BEGIN Expr2_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Expr2_fieldheader}
+																				<a {$Expr2_orderlinkattrs}>
+											{$label dbo_View_1 Expr2}
+										</a>
+									{END Expr2_fieldheader}
+									</th>
+									{END Expr2_fieldheadercolumn}
+
+																	{BEGIN Expr3_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Expr3_fieldheader}
+																				<a {$Expr3_orderlinkattrs}>
+											{$label dbo_View_1 Expr3}
+										</a>
+									{END Expr3_fieldheader}
+									</th>
+									{END Expr3_fieldheadercolumn}
+
+																	{BEGIN Expr4_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Expr4_fieldheader}
+																				<a {$Expr4_orderlinkattrs}>
+											{$label dbo_View_1 Expr4}
+										</a>
+									{END Expr4_fieldheader}
+									</th>
+									{END Expr4_fieldheadercolumn}
+
+																	{BEGIN Currunt_Readings_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Currunt_Readings_fieldheader}
+																				<a {$Currunt_Readings_orderlinkattrs}>
+											{$label dbo_View_1 Currunt_Readings}
+										</a>
+									{END Currunt_Readings_fieldheader}
+									</th>
+									{END Currunt_Readings_fieldheadercolumn}
+
+																	{BEGIN Unit_Consumed_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Unit_Consumed_fieldheader}
+																				<a {$Unit_Consumed_orderlinkattrs}>
+											{$label dbo_View_1 Unit_Consumed}
+										</a>
+									{END Unit_Consumed_fieldheader}
+									</th>
+									{END Unit_Consumed_fieldheadercolumn}
+
+																	{BEGIN Bill_Amount_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Bill_Amount_fieldheader}
+																				<a {$Bill_Amount_orderlinkattrs}>
+											{$label dbo_View_1 Bill_Amount}
+										</a>
+									{END Bill_Amount_fieldheader}
+									</th>
+									{END Bill_Amount_fieldheadercolumn}
+
+																	{BEGIN Due_Date_fieldheadercolumn}
+									<th class="runner-cc runner-clast">
+									{BEGIN Due_Date_fieldheader}
+																				<a {$Due_Date_orderlinkattrs}>
+											{$label dbo_View_1 Due_Date}
+										</a>
+									{END Due_Date_fieldheader}
+									</th>
+									{END Due_Date_fieldheadercolumn}
+
+
+									
+									<th class="runner-cr"><img src="images/spacer.gif"></th>
+									{BEGIN endrecordheader_block}
+									<th class="runner-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="runner-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									<td class="runner-cl"></td>
+
+																		{BEGIN listIcons_column}
+									<td class="runner-cc runner-bc runner-icons" iEditCont="all">
+									
+									
+									
+																		</td>	
+									{END listIcons_column}	
+
+									
+
+										{BEGIN Expr1_fieldcolumn}
+	<td class="runner-cc " {$Expr1_style}>
+		{$Expr1_value}
+	</td>
+{END Expr1_fieldcolumn}
+
+	{BEGIN Name_fieldcolumn}
+	<td class="runner-cc " {$Name_style}>
+		{$Name_value}
+	</td>
+{END Name_fieldcolumn}
+
+	{BEGIN Father_Name_fieldcolumn}
+	<td class="runner-cc " {$Father_Name_style}>
+		{$Father_Name_value}
+	</td>
+{END Father_Name_fieldcolumn}
+
+	{BEGIN Address_fieldcolumn}
+	<td class="runner-cc " {$Address_style}>
+		{$Address_value}
+	</td>
+{END Address_fieldcolumn}
+
+	{BEGIN Contact_fieldcolumn}
+	<td class="runner-cc " {$Contact_style}>
+		{$Contact_value}
+	</td>
+{END Contact_fieldcolumn}
+
+	{BEGIN Location_fieldcolumn}
+	<td class="runner-cc " {$Location_style}>
+		{$Location_value}
+	</td>
+{END Location_fieldcolumn}
+
+	{BEGIN Customer_Type_fieldcolumn}
+	<td class="runner-cc " {$Customer_Type_style}>
+		{$Customer_Type_value}
+	</td>
+{END Customer_Type_fieldcolumn}
+
+	{BEGIN Module_fieldcolumn}
+	<td class="runner-cc " {$Module_style}>
+		{$Module_value}
+	</td>
+{END Module_fieldcolumn}
+
+	{BEGIN Password_fieldcolumn}
+	<td class="runner-cc " {$Password_style}>
+		{$Password_value}
+	</td>
+{END Password_fieldcolumn}
+
+	{BEGIN Role_fieldcolumn}
+	<td class="runner-cc " {$Role_style}>
+		{$Role_value}
+	</td>
+{END Role_fieldcolumn}
+
+	{BEGIN Module_Type_fieldcolumn}
+	<td class="runner-cc " {$Module_Type_style}>
+		{$Module_Type_value}
+	</td>
+{END Module_Type_fieldcolumn}
+
+	{BEGIN Module_Condition_fieldcolumn}
+	<td class="runner-cc " {$Module_Condition_style}>
+		{$Module_Condition_value}
+	</td>
+{END Module_Condition_fieldcolumn}
+
+	{BEGIN Entry_Date_fieldcolumn}
+	<td class="runner-cc " {$Entry_Date_style}>
+		{$Entry_Date_value}
+	</td>
+{END Entry_Date_fieldcolumn}
+
+	{BEGIN Expr2_fieldcolumn}
+	<td class="runner-cc " {$Expr2_style}>
+		{$Expr2_value}
+	</td>
+{END Expr2_fieldcolumn}
+
+	{BEGIN Expr3_fieldcolumn}
+	<td class="runner-cc " {$Expr3_style}>
+		{$Expr3_value}
+	</td>
+{END Expr3_fieldcolumn}
+
+	{BEGIN Expr4_fieldcolumn}
+	<td class="runner-cc " {$Expr4_style}>
+		{$Expr4_value}
+	</td>
+{END Expr4_fieldcolumn}
+
+	{BEGIN Currunt_Readings_fieldcolumn}
+	<td class="runner-cc " {$Currunt_Readings_style}>
+		{$Currunt_Readings_value}
+	</td>
+{END Currunt_Readings_fieldcolumn}
+
+	{BEGIN Unit_Consumed_fieldcolumn}
+	<td class="runner-cc " {$Unit_Consumed_style}>
+		{$Unit_Consumed_value}
+	</td>
+{END Unit_Consumed_fieldcolumn}
+
+	{BEGIN Bill_Amount_fieldcolumn}
+	<td class="runner-cc " {$Bill_Amount_style}>
+		{$Bill_Amount_value}
+	</td>
+{END Bill_Amount_fieldcolumn}
+
+	{BEGIN Due_Date_fieldcolumn}
+	<td class="runner-cc runner-clast" {$Due_Date_style}>
+		{$Due_Date_value}
+	</td>
+{END Due_Date_fieldcolumn}
+
+
+																		<td class="runner-cr"></td>
+									{BEGIN endrecord_block}
+									<td class="runner-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+															{BEGIN grid_footer}
+																<tr class="runner-bottomrow style1{$gridFooter_class}" >
+									{BEGIN record_footer}
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+																		{BEGIN listIcons_column}
+									<td class="runner-cc"></td>
+									{END listIcons_column}	
+									
+									
+
+									{BEGIN Expr1_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Expr1_fieldheadercolumn}
+{BEGIN Name_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Name_fieldheadercolumn}
+{BEGIN Father_Name_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Father_Name_fieldheadercolumn}
+{BEGIN Address_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Address_fieldheadercolumn}
+{BEGIN Contact_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Contact_fieldheadercolumn}
+{BEGIN Location_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Location_fieldheadercolumn}
+{BEGIN Customer_Type_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Customer_Type_fieldheadercolumn}
+{BEGIN Module_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Module_fieldheadercolumn}
+{BEGIN Password_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Password_fieldheadercolumn}
+{BEGIN Role_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Role_fieldheadercolumn}
+{BEGIN Module_Type_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Module_Type_fieldheadercolumn}
+{BEGIN Module_Condition_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Module_Condition_fieldheadercolumn}
+{BEGIN Entry_Date_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Entry_Date_fieldheadercolumn}
+{BEGIN Expr2_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Expr2_fieldheadercolumn}
+{BEGIN Expr3_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Expr3_fieldheadercolumn}
+{BEGIN Expr4_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Expr4_fieldheadercolumn}
+{BEGIN Currunt_Readings_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Currunt_Readings_fieldheadercolumn}
+{BEGIN Unit_Consumed_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Unit_Consumed_fieldheadercolumn}
+{BEGIN Bill_Amount_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Bill_Amount_fieldheadercolumn}
+{BEGIN Due_Date_fieldheadercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Due_Date_fieldheadercolumn}
+
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									
+									
+									{BEGIN endrecordfooter_block}
+									<td class="runner-cs"></td>
+									{END endrecordfooter_block}
+									{END record_footer}
+								</tr>
+								{END grid_footer}
+
+						</tbody>
+					</table>
+					
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style2 runner-b-wrapper {$wrapperclass_pagination}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_pagination}
+<table class="runner-c runner-c-pagination" cellpadding="0" >
+<tr class="{$cheaderclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN pagination_block}
+<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+{END pagination_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pagination}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_bigblock}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_bigblock}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

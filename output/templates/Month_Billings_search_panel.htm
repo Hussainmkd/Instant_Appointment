@@ -1,0 +1,70 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		{mlang_message SEARCH_CRITERIA}:&nbsp;
+		<input type="radio" name="srchType" {$all_checkbox}>{BEGIN all_checkbox_label}{mlang_message SEARCH_ALL}{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" {$any_checkbox}>{BEGIN any_checkbox_label}{mlang_message SEARCH_ANY}{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>{mlang_message SEARCH_ADD_FIELD}</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_Bill_ID}
+			<a href="#" id="addSearchControl_Bill_ID" class="addSearchControl" {$addSearchControl_Bill_ID_attrs}>{$label dbo_Month_Billings Bill_ID}</a><br>
+		{END addSearch_Bill_ID}
+		{BEGIN addSearch_Customer_ID}
+			<a href="#" id="addSearchControl_Customer_ID" class="addSearchControl" {$addSearchControl_Customer_ID_attrs}>{$label dbo_Month_Billings Customer_ID}</a><br>
+		{END addSearch_Customer_ID}
+		{BEGIN addSearch_Bill_Month}
+			<a href="#" id="addSearchControl_Bill_Month" class="addSearchControl" {$addSearchControl_Bill_Month_attrs}>{$label dbo_Month_Billings Bill_Month}</a><br>
+		{END addSearch_Bill_Month}
+		{BEGIN addSearch_Previous_Readings}
+			<a href="#" id="addSearchControl_Previous_Readings" class="addSearchControl" {$addSearchControl_Previous_Readings_attrs}>{$label dbo_Month_Billings Previous_Readings}</a><br>
+		{END addSearch_Previous_Readings}
+		{BEGIN addSearch_Currunt_Readings}
+			<a href="#" id="addSearchControl_Currunt_Readings" class="addSearchControl" {$addSearchControl_Currunt_Readings_attrs}>{$label dbo_Month_Billings Currunt_Readings}</a><br>
+		{END addSearch_Currunt_Readings}
+		{BEGIN addSearch_Unit_Consumed}
+			<a href="#" id="addSearchControl_Unit_Consumed" class="addSearchControl" {$addSearchControl_Unit_Consumed_attrs}>{$label dbo_Month_Billings Unit_Consumed}</a><br>
+		{END addSearch_Unit_Consumed}
+		{BEGIN addSearch_Bill_Amount}
+			<a href="#" id="addSearchControl_Bill_Amount" class="addSearchControl" {$addSearchControl_Bill_Amount_attrs}>{$label dbo_Month_Billings Bill_Amount}</a><br>
+		{END addSearch_Bill_Amount}
+		{BEGIN addSearch_Due_Date}
+			<a href="#" id="addSearchControl_Due_Date" class="addSearchControl" {$addSearchControl_Due_Date_attrs}>{$label dbo_Month_Billings Due_Date}</a><br>
+		{END addSearch_Due_Date}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</td>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>{mlang_message SEARCH}</a>
+		</span>
+	</div>
+</div>

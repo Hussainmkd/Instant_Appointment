@@ -1,0 +1,253 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>{$caption dbo_Customers}</h1>
+<span>
+{BEGIN page_number}
+{mlang_message PAGE1} {$pageno} {mlang_message PAGE2} {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN ID_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN ID_fieldheader}
+	<b>{$label dbo_Customers ID}</b>
+	{END ID_fieldheader}
+</td>
+{END ID_fieldheadercolumn}
+	{BEGIN Name_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Name_fieldheader}
+	<b>{$label dbo_Customers Name}</b>
+	{END Name_fieldheader}
+</td>
+{END Name_fieldheadercolumn}
+	{BEGIN Father_Name_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Father_Name_fieldheader}
+	<b>{$label dbo_Customers Father_Name}</b>
+	{END Father_Name_fieldheader}
+</td>
+{END Father_Name_fieldheadercolumn}
+	{BEGIN Address_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Address_fieldheader}
+	<b>{$label dbo_Customers Address}</b>
+	{END Address_fieldheader}
+</td>
+{END Address_fieldheadercolumn}
+	{BEGIN Contact_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Contact_fieldheader}
+	<b>{$label dbo_Customers Contact}</b>
+	{END Contact_fieldheader}
+</td>
+{END Contact_fieldheadercolumn}
+	{BEGIN Location_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Location_fieldheader}
+	<b>{$label dbo_Customers Location}</b>
+	{END Location_fieldheader}
+</td>
+{END Location_fieldheadercolumn}
+	{BEGIN Customer_Type_fieldheadercolumn}
+<td class="runner-cc">
+	{BEGIN Customer_Type_fieldheader}
+	<b>{$label dbo_Customers Customer_Type}</b>
+	{END Customer_Type_fieldheader}
+</td>
+{END Customer_Type_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN ID_fieldcolumn}
+<td  class="runner-cc" {$ID_style}>
+	{$ID_value}
+</td>
+{END ID_fieldcolumn}
+	{BEGIN Name_fieldcolumn}
+<td  class="runner-cc" {$Name_style}>
+	{$Name_value}
+</td>
+{END Name_fieldcolumn}
+	{BEGIN Father_Name_fieldcolumn}
+<td  class="runner-cc" {$Father_Name_style}>
+	{$Father_Name_value}
+</td>
+{END Father_Name_fieldcolumn}
+	{BEGIN Address_fieldcolumn}
+<td  class="runner-cc" {$Address_style}>
+	{$Address_value}
+</td>
+{END Address_fieldcolumn}
+	{BEGIN Contact_fieldcolumn}
+<td  class="runner-cc" {$Contact_style}>
+	{$Contact_value}
+</td>
+{END Contact_fieldcolumn}
+	{BEGIN Location_fieldcolumn}
+<td  class="runner-cc" {$Location_style}>
+	{$Location_value}
+</td>
+{END Location_fieldcolumn}
+	{BEGIN Customer_Type_fieldcolumn}
+<td  class="runner-cc" {$Customer_Type_style}>
+	{$Customer_Type_value}
+</td>
+{END Customer_Type_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN ID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ID_fieldfootercolumn}
+{BEGIN Name_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Name_fieldfootercolumn}
+{BEGIN Father_Name_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Father_Name_fieldfootercolumn}
+{BEGIN Address_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_fieldfootercolumn}
+{BEGIN Contact_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Contact_fieldfootercolumn}
+{BEGIN Location_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Location_fieldfootercolumn}
+{BEGIN Customer_Type_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Customer_Type_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>
